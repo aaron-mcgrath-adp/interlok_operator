@@ -1,0 +1,10 @@
+apiVersion: intergrations.proagrica.com/v1alpha1
+kind: Interlok
+metadata:
+  name: my-interlok
+spec:
+  # Add fields here
+  instances: 1
+  image: adaptrislabs/interlok-hello-world
+  port: 8082
+  profiler: false

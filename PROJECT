@@ -1,0 +1,19 @@
+domain: proagrica.com
+layout:
+- go.kubebuilder.io/v3
+plugins:
+  manifests.sdk.operatorframework.io/v2: {}
+  scorecard.sdk.operatorframework.io/v2: {}
+projectName: interlok-operator
+repo: github.com/aaron-mcgrath-adp/interlok_operator
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: proagrica.com
+  group: intergrations
+  kind: Interlok
+  path: github.com/aaron-mcgrath-adp/interlok_operator/api/v1alpha1
+  version: v1alpha1
+version: "3"
