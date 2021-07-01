@@ -207,3 +207,6 @@ kubectl apply -f ./config/samples/blah.yaml
 
 Then you can also do a __make run__ on the command line to test your operator.
 
+## Docker Image
+
+The latest version can be found here; https://hub.docker.com/repository/docker/aaronmcgrathadpx/interlok-operator
