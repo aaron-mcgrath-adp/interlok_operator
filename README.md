@@ -181,7 +181,7 @@ Install the release binary in your PATH:
 chmod +x operator-sdk_${OS}_${ARCH} && sudo mv operator-sdk_${OS}_${ARCH} /usr/local/bin/operator-sdk
 ```
 
-## Notes on usage
+## Notes on developer usage
 
 ### MAKE
 
@@ -210,3 +210,18 @@ Then you can also do a __make run__ on the command line to test your operator.
 ## Docker Image
 
 The latest version can be found here; https://hub.docker.com/repository/docker/aaronmcgrathadpx/interlok-operator
+
+## Deployment
+
+You can deploy the operator in one of two ways.  The first requires the development environment as discussed above and then you can simply execute one of the following on your linux command line at the root of the interlok-operator;
+
+```
+$ make install
+$ make run
+```
+
+Make install will perform apply the CRD.
+
+Make run, will simply execute the main.go class which will start the operator in your cluster.
+
+The second option is simply to apply the yaml files in the config directory.  You'll find everything from the CRD, RBAC permissions, controller manager through to a sample Interlok deployment for our controller to manage. 
