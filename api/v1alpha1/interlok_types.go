@@ -28,10 +28,13 @@ type InterlokSpec struct {
 	// Important: Run "make" to regenerate code after modifying this file
 
 	// The number of required instances.
-	Instances    int32  `json:"instances,omitempty"`
-	Image        string `json:"image,omitempty"`
-	Port         int32  `json:"port,omitempty"`
-	WithProfiler bool   `json:"profiler,omitempty"`
+	Instances int32 `json:"instances,omitempty"`
+	// Your Interlok image you want to be managed.
+	Image string `json:"image,omitempty"`
+	// Your Interlok webserver port you want to open.
+	JettyPort int32 `json:"jetty-port,omitempty"`
+	// Set to true if you want to run Interlok in profiler mode (assumes your image has the required dependencies in place).
+	WithProfiler bool `json:"profiler,omitempty"`
 }
 
 // InterlokStatus defines the observed state of Interlok

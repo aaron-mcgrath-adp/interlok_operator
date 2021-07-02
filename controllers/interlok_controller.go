@@ -113,7 +113,7 @@ func (r *InterlokReconciler) deploymentForInterlok(m *intergrationsv1alpha1.Inte
 
 	replicas := m.Spec.Instances
 	image := m.Spec.Image
-	port := m.Spec.Port
+	port := m.Spec.JettyPort
 	javaopts := TimeToLive
 
 	if m.Spec.WithProfiler {

@@ -6,5 +6,5 @@ spec:
   # Add fields here
   instances: 1
   image: adaptrislabs/interlok-hello-world
-  port: 8082
+  jetty-port: 8082
   profiler: false

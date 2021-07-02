@@ -44,15 +44,19 @@ spec:
             description: InterlokSpec defines the desired state of Interlok
             properties:
               image:
+                description: Your Interlok image you want to be managed.
                 type: string
               instances:
                 description: The number of required instances.
                 format: int32
                 type: integer
-              port:
+              jetty-port:
+                description: Your Interlok webserver port you want to open.
                 format: int32
                 type: integer
               profiler:
+                description: Set to true if you want to run Interlok in profiler mode
+                  (assumes your image has the required dependencies in place).
                 type: boolean
             type: object
           status:
